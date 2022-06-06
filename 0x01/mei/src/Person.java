@@ -4,14 +4,13 @@ import java.time.ZoneId;
 import java.util.Date;
 
 public class Person {
+  
   private final String name;
   private final String surname;
   private final Date birthDate;
-
   private boolean anotherCompanyOwner;
   private boolean pensioner;
   private boolean publicServer;
-
   private float salary;
 
   public Person(
