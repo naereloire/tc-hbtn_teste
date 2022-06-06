@@ -1,3 +1,5 @@
+package src;
+
 class Person {
   private  String userName;
   private  String password;

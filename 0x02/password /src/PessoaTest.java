@@ -1,3 +1,5 @@
+package src;
+
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -8,11 +10,11 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class PessoaTest {
-  teste.Person person;
+ Person person;
 
   @BeforeAll
   public void setup() {
-    person = new teste.Person();
+    person = new Person();
   }
 
   @ParameterizedTest(name = "check_user_valid {0}")
