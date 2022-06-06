@@ -1,12 +1,13 @@
-package src;//package src;
+package src; // package src;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class Person {
-  private  String userName;
-  private  String password;
+  private String userName;
+  private String password;
 
-  Person() {
-
-  }
+  public Person() {}
 
   public void setUserName(String userName) {
     this.userName = userName;
@@ -21,8 +22,8 @@ public class Person {
   }
 
   public boolean checkPassword() {
-    return this.password.length() >= 8
-        && this.userName.matches("(?m)^((?=.*\\\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\\\\W]).{8,})$\n");
+    Pattern p =
+        Pattern.compile("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8,20}$");
+    return p.matcher(this.password).matches();
   }
-
 }
