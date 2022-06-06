@@ -1,4 +1,4 @@
-//package src;
+package src;//package src;
 
 public class Person {
   private  String userName;
