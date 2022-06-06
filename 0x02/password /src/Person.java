@@ -1,6 +1,6 @@
 //package src;
 
-class Person {
+public class Person {
   private  String userName;
   private  String password;
 
