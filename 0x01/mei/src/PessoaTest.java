@@ -3,12 +3,12 @@
 //
 //import java.util.Date;
 //
-//public class PersonTest {
-//  private teste.Person person;
+//public class PessoaTest {
+//  private teste.Pessoa person;
 //
 //  @BeforeEach
 //  public void setup() {
-//    person = new teste.Person("Paul", "McCartney", new Date(2000), true, true, true);
+//    person = new teste.Pessoa("Paul", "McCartney", new Date(2000), true, true, true);
 //  }
 //
 //  @Test

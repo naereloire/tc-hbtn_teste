@@ -3,8 +3,8 @@ import java.time.Period;
 import java.time.ZoneId;
 import java.util.Date;
 
-public class Person {
-  
+public class Pessoa {
+
   private final String name;
   private final String surname;
   private final Date birthDate;
@@ -13,7 +13,7 @@ public class Person {
   private boolean publicServer;
   private float salary;
 
-  public Person(
+  public Pessoa(
       String name,
       String surname,
       Date birthDate,
