@@ -1,4 +1,4 @@
-//package src;
+package src;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.TestInstance;
