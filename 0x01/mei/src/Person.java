@@ -1,5 +1,3 @@
-
-
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.ZoneId;
@@ -17,12 +15,12 @@ public class Person {
   private float salary;
 
   public Person(
-          String name,
-          String surname,
-          Date birthDate,
-          boolean anotherCompanyOwner,
-          boolean pensioner,
-          boolean publicServer) {
+      String name,
+      String surname,
+      Date birthDate,
+      boolean anotherCompanyOwner,
+      boolean pensioner,
+      boolean publicServer) {
     this.name = name;
     this.surname = surname;
     this.birthDate = birthDate;
@@ -82,13 +80,14 @@ public class Person {
   public boolean isMEI() {
     LocalDate currentDate = LocalDate.now();
     int age =
-            calculateAge(
-                    getBirthDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), currentDate);
+        calculateAge(
+            getBirthDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), currentDate);
 
     if (getSalary() < 130000) return true;
     if (age > 18) return true;
     if (this.anotherCompanyOwner) return false;
     if (this.pensioner) return false;
-    return !this.publicServer;
+    if (this.publicServer) return false;
+    return true;
   }
 }
