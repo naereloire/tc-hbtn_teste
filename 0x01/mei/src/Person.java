@@ -83,10 +83,12 @@ public class Person {
         calculateAge(
             getBirthDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate(), currentDate);
 
-    if (getSalary() < 130000) return true;
-    if (age > 18) return true;
+    if (getSalary() > 130000) return false;
+    if (age < 18) return false;
     if (this.anotherCompanyOwner) return false;
     if (this.pensioner) return false;
-    return !this.publicServer;
+    if (this.publicServer) return false;
+    return true;
   }
+
 }

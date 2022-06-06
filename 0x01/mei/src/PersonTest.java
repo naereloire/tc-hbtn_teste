@@ -1,5 +1,5 @@
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.Date;
 
@@ -8,17 +8,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PersonTest {
   private Person person;
 
-  void setup() {
+  @BeforeEach
+  public void setup() {
     person = new Person("Paul", "McCartney", new Date(2000), true, true, true);
-  }
-
-  @Before
-  public void before() throws Exception {
-    setup();
   }
 
   @Test
   public void show_full_name() {
+    System.out.println(person);
     assertEquals("Paul McCartney", person.fullName());
   }
 
@@ -30,7 +27,6 @@ public class PersonTest {
 
   @Test
   public void person_is_MEI() {
-    person.setSalary(1000);
     person.setAnotherCompanyOwner(false);
     person.setPensioner(false);
     person.setPublicServer(false);
@@ -40,7 +36,7 @@ public class PersonTest {
 
   @Test
   public void person_is_not_MEI() {
-    person.setPensioner(true);
+    person.setAnotherCompanyOwner(true);
     assertFalse(person.isMEI());
   }
 }
