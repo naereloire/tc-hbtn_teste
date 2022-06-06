@@ -1,11 +1,19 @@
 package teste;
 
 class Person {
-  private final String userName;
-  private final String password;
+  private  String userName;
+  private  String password;
 
   Person() {
-    throw new IllegalStateException("Utility class");
+
+  }
+
+  public void setUserName(String userName) {
+    this.userName = userName;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
   }
 
   public boolean checkUser() {
@@ -16,4 +24,5 @@ class Person {
     return this.password.length() >= 8
         && this.userName.matches("(?m)^((?=.*\\\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\\\\W]).{8,})$\n");
   }
+
 }
