@@ -30,6 +30,7 @@ public class PersonTest {
 
   @Test
   public void person_is_MEI() {
+    person.setSalary(1000);
     person.setAnotherCompanyOwner(false);
     person.setPensioner(false);
     person.setPublicServer(false);

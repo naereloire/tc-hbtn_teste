@@ -87,7 +87,6 @@ public class Person {
     if (age > 18) return true;
     if (this.anotherCompanyOwner) return false;
     if (this.pensioner) return false;
-    if (this.publicServer) return false;
-    return true;
+    return !this.publicServer;
   }
 }
