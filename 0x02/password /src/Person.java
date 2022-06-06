@@ -1,5 +1,3 @@
-package teste;
-
 class Person {
   private  String userName;
   private  String password;
